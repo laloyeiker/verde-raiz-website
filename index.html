@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Raíz Tapachula - Lavado Ecológico Premium a Domicilio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo::before {
+            content: "🌱";
+            font-size: 2rem;
+        }
+        
+        .slogan {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-left: 10px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: #FF6F00;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,111,0,0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #81C784, #4CAF50);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .hero .cta-button {
+            font-size: 1.2rem;
+            padding: 15px 35px;
+        }
+        
+        /* Como Funciona */
+        .como-funciona {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 3rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step h3 {
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+        
+        /* Servicios */
+        .servicios {
+            padding: 80px 0;
+        }
+        
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .servicio-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid transparent;
+        }
+        
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #4CAF50;
+        }
+        
+        .servicio-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .precio {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF6F00;
+            margin: 1rem 0;
+        }
+        
+        /* Paquetes */
+        .paquetes {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8F5E8, #F1F8E9);
+        }
+        
+        .paquetes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .paquete-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .paquete-card.popular::before {
+            content: "MÁS POPULAR";
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #FF6F00;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .paquete-card:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Impacto */
+        .impacto {
+            padding: 80px 0;
+            background: #2E7D32;
+            color: white;
+        }
+        
+        .impacto-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat {
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #81C784;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Colaboracion */
+        .colaboracion {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .colaboracion-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .testimonio-estudiante {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonio-estudiante::before {
+            content: """;
+            font-size: 4rem;
+            color: #4CAF50;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+        
+        /* Testimonios */
+        .testimonios {
+            padding: 80px 0;
+        }
+        
+        .testimonios-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 1rem 0;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonio {
+            min-width: 350px;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            scroll-snap-align: start;
+        }
+        
+        /* Formulario */
+        .formulario {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        .form-submit {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: #2E7D32;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1B5E20;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #81C784;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #81C784;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            z-index: 1000;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            z-index: 2000;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-nav ul li {
+            margin: 1.5rem 0;
+        }
+
+        .mobile-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+
+            .cta-button {
+                display: none;
+            }
+            
+            nav {
+                padding: 0 10px;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .slogan {
+                display: none;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero .cta-button {
+                display: inline-block;
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            /* Sections spacing */
+            .como-funciona,
+            .servicios,
+            .paquetes,
+            .impacto,
+            .colaboracion,
+            .testimonios,
+            .formulario {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            /* Steps */
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .step {
+                padding: 1.5rem;
+            }
+
+            .step-icon {
+                font-size: 3rem;
+            }
+
+            /* Services */
+            .servicios-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .servicio-card {
+                padding: 1.5rem;
+            }
+
+            .servicio-icon {
+                font-size: 2.5rem;
+            }
+
+            .precio {
+                font-size: 1.8rem;
+            }
+
+            /* Packages */
+            .paquetes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .paquete-card {
+                padding: 2rem;
+            }
+
+            /* Impact stats */
+            .impacto-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+            }
+
+            /* Collaboration */
+            .colaboracion-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonio-estudiante {
+                padding: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            /* Testimonials */
+            .testimonios-slider {
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+            
+            .testimonio {
+                min-width: 280px;
+                padding: 1.5rem;
+            }
+
+            /* Form */
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin: 0 15px;
+            }
+
+            .form-group {
+                margin-bottom: 1.2rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 15px;
+                font-size: 1rem;
+                border-radius: 10px;
+            }
+
+            .form-submit {
+                padding: 18px;
+                font-size: 1.1rem;
+                border-radius: 12px;
+            }
+
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-section h3 {
+                margin-bottom: 1rem;
+            }
+
+            .footer-section ul {
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .social-links a {
+                font-size: 2rem;
+            }
+
+            /* WhatsApp button */
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .impacto-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                margin: 0 10px;
+                padding: 1.5rem;
+            }
+
+            .step,
+            .servicio-card,
+            .paquete-card {
+                padding: 1.2rem;
+            }
+
+            .testimonio {
+                min-width: 260px;
+                padding: 1.2rem;
+            }
+        }
+
+        /* Touch improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .cta-button,
+            .form-submit {
+                min-height: 48px;
+                font-size: 1.1rem;
+            }
+
+            .nav-menu a,
+            .mobile-nav ul li a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .servicio-card,
+            .paquete-card,
+            .step {
+                transition: none;
+            }
+
+            .servicio-card:active,
+            .paquete-card:active,
+            .step:active {
+                transform: scale(0.98);
+            }
+        }
+        
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                Verde Raíz Tapachula
+                <span class="slogan">"Lavamos tu auto, cuidamos tu mundo"</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#paquetes">Promociones</a></li>
+                <li><a href="#agendar">Agendar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#agendar" class="cta-button">¡Agenda tu lavado ahora!</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close" onclick="toggleMobileMenu()">×</button>
+        <ul>
+            <li><a href="#inicio" onclick="toggleMobileMenu()">🏠 Inicio</a></li>
+            <li><a href="#servicios" onclick="toggleMobileMenu()">🚗 Servicios</a></li>
+            <li><a href="#impacto" onclick="toggleMobileMenu()">🌱 Impacto</a></li>
+            <li><a href="#paquetes" onclick="toggleMobileMenu()">💰 Promociones</a></li>
+            <li><a href="#agendar" onclick="toggleMobileMenu()">📅 Agendar Lavado</a></li>
+            <li><a href="#contacto" onclick="toggleMobileMenu()">📞 Contacto</a></li>
+        </ul>
+        <a href="#agendar" class="cta-button" onclick="toggleMobileMenu()" style="margin-top: 2rem; display: inline-block;">
+            🌱 ¡Agenda tu lavado ahora!
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>El primer lavado ecológico premium a domicilio en Tapachula</h1>
+                <p>Hasta tu puerta, sin usar agua, sembrando un árbol por cada lavado</p>
+                <a href="#agendar" class="cta-button">Pide tu lavado aquí</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="como-funciona animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">¿Cómo Funciona?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📱</div>
+                    <h3>1. Agenda por WhatsApp o web</h3>
+                    <p>Programa tu cita en menos de 2 minutos desde la comodidad de tu hogar</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🚐</div>
+                    <h3>2. Vamos a donde estés</h3>
+                    <p>Nuestro equipo llega puntual con todo lo necesario para dejar tu auto impecable</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🌱</div>
+                    <h3>3. Tu auto limpio y el planeta agradecido</h3>
+                    <p>Resultado profesional + árbol sembrado + agua ahorrada = satisfacción total</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">🚗</div>
+                    <h3>Carro Chico</h3>
+                    <div class="precio">$150</div>
+                    <p>Sedán compacto, hatchback</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>✅ Lavado interior/exterior</li>
+                        <li>✅ Cera ecológica</li>
+                        <li>✅ Aromatizante</li>
+                        <li>✅ Árbol sembrado 🌳</li>
+                    </ul>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🚙</div>
+                    <h3>Mediano</h3>
+                    <div class="precio">$175</div>
+                    <p>SUV compacta, sedán mediano</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>✅ Lavado interior/exterior</li>
+                        <li>✅ Cera ecológica</li>
+                        <li>✅ Aromatizante</li>
+                        <li>✅ Árbol sembrado 🌳</li>
+                    </ul>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🚐</div>
+                    <h3>Grande</h3>
+                    <div class="precio">$200</div>
+                    <p>SUV grande, camioneta</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>✅ Lavado interior/exterior</li>
+                        <li>✅ Cera ecológica</li>
+                        <li>✅ Aromatizante</li>
+                        <li>✅ Árbol sembrado 🌳</li>
+                    </ul>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🚛</div>
+                    <h3>Góndola</h3>
+                    <div class="precio">$230</div>
+                    <p>Pick-up, van, vehículo comercial</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>✅ Lavado interior/exterior</li>
+                        <li>✅ Cera ecológica</li>
+                        <li>✅ Aromatizante</li>
+                        <li>✅ Árbol sembrado 🌳</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes -->
+    <section id="paquetes" class="paquetes animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Paquetes Especiales y Membresías</h2>
+            <div class="paquetes-grid">
+                <div class="paquete-card">
+                    <h3>🥉 Bronce</h3>
+                    <div class="precio">$280</div>
+                    <p>2 lavados incluidos</p>
+                    <p style="color: #888; text-decoration: line-through;">Precio normal: $350</p>
+                    <p style="color: #4CAF50; font-weight: bold;">Ahorro: $70</p>
+                    <a href="#agendar" class="cta-button" style="display: inline-block; margin-top: 1rem;">Seleccionar</a>
+                </div>
+                <div class="paquete-card popular">
+                    <h3>🥈 Plata</h3>
+                    <div class="precio">$520</div>
+                    <p>4 lavados incluidos</p>
+                    <p style="color: #888; text-decoration: line-through;">Precio normal: $700</p>
+                    <p style="color: #4CAF50; font-weight: bold;">Ahorro: $180</p>
+                    <a href="#agendar" class="cta-button" style="display: inline-block; margin-top: 1rem;">Seleccionar</a>
+                </div>
+                <div class="paquete-card">
+                    <h3>🏢 Verde Empresarial</h3>
+                    <div class="precio">Cotizar</div>
+                    <p>Hasta 8 autos por mes</p>
+                    <p>Ideal para empresas</p>
+                    <p>Facturación disponible</p>
+                    <a href="#contacto" class="cta-button" style="display: inline-block; margin-top: 1rem;">Contactar</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#agendar" class="cta-button">Ver todas las promociones</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto -->
+    <section id="impacto" class="impacto animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Nuestro Impacto Ecológico</h2>
+            <div class="impacto-stats">
+                <div class="stat">
+                    <span class="stat-number">7,200+</span>
+                    <span class="stat-label">Árboles sembrados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">800,000+</span>
+                    <span class="stat-label">Litros de agua ahorrados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">600+</span>
+                    <span class="stat-label">Clientes satisfechos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0%</span>
+                    <span class="stat-label">Químicos dañinos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colaboracion -->
+    <section class="colaboracion animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Proyecto Estudiantil con Propósito</h2>
+            <div class="colaboracion-content">
+                <div>
+                    <h3 style="color: #2E7D32; margin-bottom: 1rem;">🎓 Estudiantes del CUCS</h3>
+                    <p>Somos 6 estudiantes universitarios comprometidos con el medio ambiente y el emprendimiento social. Este proyecto nos permite costear nuestros estudios mientras generamos un impacto positivo en nuestra comunidad.</p>
+                    <p style="margin-top: 1rem;">Cada lavado que solicitas contribuye directamente a:</p>
+                    <ul style="margin-top: 1rem;">
+                        <li>✅ Nuestro crecimiento académico y profesional</li>
+                        <li>✅ La reforestación de Tapachula</li>
+                        <li>✅ El cuidado del agua en nuestra región</li>
+                        <li>✅ El desarrollo de tecnologías limpias</li>
+                    </ul>
+                </div>
+                <div class="testimonio-estudiante">
+                    <p>"Gracias a este proyecto puedo pagar mi carrera y ayudar al medio ambiente. Cada cliente que confía en nosotros nos motiva a seguir creciendo y mejorando nuestro servicio."</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #2E7D32;">- María González, Estudiante de Ingeniería Ambiental</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-slider">
+                <div class="testimonio">
+                    <p>"Excelente servicio, puntuales y muy respetuosos. Y saber que estoy ayudando al planeta me encanta. ¡Totalmente recomendado!"</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #2E7D32;">- Ana Ruiz ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio">
+                    <p>"Mi auto quedó impecable, mejor que en cualquier autolavado tradicional. El plus ecológico es genial, mis hijos están felices de saber que sembramos un árbol."</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #2E7D32;">- Carlos Mendoza ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio">
+                    <p>"La comodidad de que vengan a casa es increíble. Servicio profesional y con conciencia ambiental. Ya soy cliente frecuente."</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #2E7D32;">- Patricia López ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio">
+                    <p>"Contraté el paquete empresarial para mi flota de taxis. Excelente trabajo, puntuales y precio justo. Mis vehículos siempre lucen perfectos."</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #2E7D32;">- Roberto Silva ⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="agendar" class="formulario animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Agenda tu Lavado Ecológico</h2>
+            <div class="form-container">
+                <form id="agendarForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección completa</label>
+                        <textarea id="direccion" name="direccion" rows="3" required placeholder="Incluye referencias para encontrar tu domicilio"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoAuto">Tipo de vehículo</label>
+                        <select id="tipoAuto" name="tipoAuto" required>
+                            <option value="">Selecciona tu vehículo</option>
+                            <option value="chico">Carro Chico - $150</option>
+                            <option value="mediano">Mediano - $175</option>
+                            <option value="grande">Grande - $200</option>
+                            <option value="gondola">Góndola - $230</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha preferida</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora preferida</label>
+                        <select id="hora" name="hora" required>
+                            <option value="">Selecciona la hora</option>
+                            <option value="08:00">8:00 AM</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="962-123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="paquete">¿Interesado en algún paquete?</label>
+                        <select id="paquete" name="paquete">
+                            <option value="">Solo este lavado</option>
+                            <option value="bronce">Paquete Bronce (2 lavados - $280)</option>
+                            <option value="plata">Paquete Plata (4 lavados - $520)</option>
+                            <option value="empresarial">Paquete Empresarial (Cotizar)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios adicionales</label>
+                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Alguna indicación especial para tu vehículo o domicilio"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">🌱 Confirmar mi cita ecológica</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌱 Verde Raíz Tapachula</h3>
+                    <p>El primer lavado ecológico premium a domicilio en Tapachula. Cuidamos tu auto, cuidamos el planeta.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/5219621234567" target="_blank">📱</a>
+                        <a href="https://facebook.com/VerdeRaizTapachula" target="_blank">📘</a>
+                        <a href="https://instagram.com/verderaiz_tapachula" target="_blank">📷</a>
+                        <a href="mailto:contacto@verderaiz.com">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul style="list-style: none;">
+                        <li>🚗 Lavado Carro Chico - $150</li>
+                        <li>🚙 Lavado Mediano - $175</li>
+                        <li>🚐 Lavado Grande - $200</li>
+                        <li>🚛 Lavado Góndola - $230</li>
+                        <li>🏢 Servicio Empresarial</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 WhatsApp: +52 962 123 4567</p>
+                    <p>📧 Email: contacto@verderaiz.com</p>
+                    <p>📍 Tapachula, Chiapas, México</p>
+                    <p>🕒 Lun-Sáb: 8:00 AM - 6:00 PM</p>
+                    <p>🕒 Domingo: 9:00 AM - 4:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Compromiso Ecológico</h3>
+                    <ul style="list-style: none;">
+                        <li>🌳 1 árbol por cada lavado</li>
+                        <li>💧 Ahorro de 90% de agua</li>
+                        <li>🧪 Productos biodegradables</li>
+                        <li>♻️ Procesos sustentables</li>
+                        <li>🎓 Proyecto estudiantil CUCS</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #4CAF50; margin-top: 2rem;">
+                <p>&copy; 2025 Verde Raíz Tapachula. Todos los derechos reservados.</p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Desarrollado por estudiantes, para el futuro del planeta 🌍</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5219621234567?text=¡Hola!%20Quiero%20agendar%20un%20lavado%20ecológico%20para%20mi%20auto" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Set minimum date to today
+        document.getElementById('fecha').min = new Date().toISOString().split('T')[0];
+        
+        // Form submission
+        document.getElementById('agendarForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            let message = `🌱 *NUEVA CITA - VERDE RAÍZ TAPACHULA*\n\n`;
+            message += `👤 *Cliente:* ${data.nombre}\n`;
+            message += `📍 *Dirección:* ${data.direccion}\n`;
+            message += `🚗 *Vehículo:* ${data.tipoAuto}\n`;
+            message += `📅 *Fecha:* ${data.fecha}\n`;
+            message += `🕒 *Hora:* ${data.hora}\n`;
+            message += `📱 *WhatsApp:* ${data.whatsapp}\n`;
+            
+            if (data.paquete) {
+                message += `📦 *Paquete:* ${data.paquete}\n`;
+            }
+            
+            if (data.comentarios) {
+                message += `💬 *Comentarios:* ${data.comentarios}\n`;
+            }
+            
+            message += `\n✅ *¡Listo para confirmar la cita!*`;
+            
+            const whatsappUrl = `https://wa.me/5219621234567?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show confirmation
+            alert('¡Perfecto! Te estamos redirigiendo a WhatsApp para confirmar tu cita. 🌱');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add floating animation to hero
+        setInterval(() => {
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPosition = `${Math.sin(Date.now() * 0.001) * 20}px ${Math.cos(Date.now() * 0.001) * 20}px`;
+            }
+        }, 50);
+        
+        // Counter animation for stats
+        function animateCounter(element, target) {
+            let count = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    element.textContent = target.toLocaleString() + (element.textContent.includes('+') ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(count).toLocaleString() + (element.textContent.includes('+') ? '+' : '');
+                }
+            }, 20);
+        }
+        
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => {
+                        const text = num.textContent;
+                        const value = parseInt(text.replace(/[^\d]/g, ''));
+                        if (value > 0) {
+                            animateCounter(num, value);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        const impactoSection = document.querySelector('.impacto');
+        if (impactoSection) {
+            statsObserver.observe(impactoSection);
+        }
+        
+        // Mobile menu toggle (if needed in future)
+        const createMobileMenu = () => {
+            if (window.innerWidth <= 768) {
+                const nav = document.querySelector('.nav-menu');
+                const menuToggle = document.createElement('button');
+                menuToggle.innerHTML = '☰';
+                menuToggle.className = 'mobile-menu-toggle';
+                menuToggle.style.cssText = `
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    display: block;
+                `;
+                
+                menuToggle.addEventListener('click', () => {
+                    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                });
+                
+                nav.parentNode.insertBefore(menuToggle, nav);
+            }
+        };
+        
+        // Auto-fill today's date as minimum
+        const today = new Date();
+        today.setDate(today.getDate() + 1); // Next day minimum
+        document.getElementById('fecha').min = today.toISOString().split('T')[0];
+        
+        // Price calculator
+        const updatePrice = () => {
+            const tipoAuto = document.getElementById('tipoAuto').value;
+            const paquete = document.getElementById('paquete').value;
+            
+            const precios = {
+                'chico': 150,
+                'mediano': 175,
+                'grande': 200,
+                'gondola': 230
+            };
+            
+            const paquetePrecios = {
+                'bronce': 280,
+                'plata': 520
+            };
+            
+            if (paquete && paquetePrecios[paquete]) {
+                // Show package price
+            } else if (tipoAuto && precios[tipoAuto]) {
+                // Show individual price
+            }
+        };
+        
+        document.getElementById('tipoAuto').addEventListener('change', updatePrice);
+        document.getElementById('paquete').addEventListener('change', updatePrice);
+        
+        console.log('🌱 Verde Raíz Tapachula - Website loaded successfully!');
+    </script>
+</body>
+</html>
